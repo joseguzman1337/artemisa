@@ -32,7 +32,7 @@
     "php": "8.4.8"
   },
   "require-dev": {
-    "squizlabs/php_codesniffer": "3.13.1"
+    "squizlabs/php_codesniffer": "3.13.2"
   },
   "type": "library"
 }
