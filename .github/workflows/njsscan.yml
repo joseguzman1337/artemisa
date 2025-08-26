@@ -34,7 +34,7 @@ jobs:
         egress-policy: audit
 
     - name: Checkout the code
-      uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+      uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4
     - name: nodejsscan scan
       id: njsscan
       uses: ajinabraham/njsscan-action@c7b65a3590ade829628b2b3c87b34ac0ce666a79
