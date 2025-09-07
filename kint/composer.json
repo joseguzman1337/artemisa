@@ -20,7 +20,7 @@
   "license": "MIT",
   "name": "raveren/kint",
   "require": {
-    "php": "8.4.11"
+    "php": "8.4.12"
   },
   "type": "library"
 }
