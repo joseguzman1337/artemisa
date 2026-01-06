@@ -27,7 +27,7 @@ jobs:
           egress-policy: audit
 
       - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5
-      - uses: nuget/setup-nuget@2d995a9b3be3b21f613eec2b0d19cf2d01ccd325
+      - uses: nuget/setup-nuget@6360107be14265899be91c45728fdad175600967
       - uses: microsoft/setup-msbuild@6fb02220983dee41ce7ae257b6f4d8f9bf5ed4ce # v2.0.0
       
       - name: Set up projects for analysis
@@ -43,4 +43,4 @@ jobs:
         uses: security-code-scan/security-code-scan-results-action@579058214e4be88ce9eea302f1fb74df1b8bc1ed
 
       - name: Upload sarif
-        uses: github/codeql-action/upload-sarif@f1f6e5f6af878fb37288ce1c627459e94dbf7d01 # v3.30.1
+        uses: github/codeql-action/upload-sarif@45c373516f557556c15d420e3f5e0aa3d64366bc # v3.31.9
