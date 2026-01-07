@@ -32,7 +32,7 @@ jobs:
           egress-policy: audit
 
       - name: Checkout code
-        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
 
       - name: flawfinder_scan
         uses: david-a-wheeler/flawfinder@56ffb9faa255f0f0d242191fa576356f47d38285
