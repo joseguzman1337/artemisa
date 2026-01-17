@@ -19,7 +19,7 @@
   "license": [ "BSD-3-Clause", "LGPL-2.1" ],
   "name": "adodb/adodb-php",
   "require": {
-    "php": "8.5.1"
+    "php": "8.5.2"
   },
   "support": {
     "issues": "https://github.com/ADOdb/ADOdb/issues",
