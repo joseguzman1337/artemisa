@@ -51,7 +51,7 @@ jobs:
       - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5
 
       - name: 42Crunch REST API Static Security Testing
-        uses: 42Crunch/api-security-audit-action@5c859ccd8c90dd4601acc694b5da6374e2c7a3c2
+        uses: 42Crunch/api-security-audit-action@c675c3d41a7932c89d166717572e5c243afaa54d
         with:
           # Please create free account at https://platform.42crunch.com/register
           # Follow these steps to configure API_TOKEN https://docs.42crunch.com/latest/content/tasks/integrate_github_actions.htm
