@@ -13,7 +13,7 @@
   "license": "LGPL-3.0",
   "name": "phenx/php-svg-lib",
   "require": {
-    "sabberworm/php-css-parser": "9.1.*"
+    "sabberworm/php-css-parser": "9.3.*"
   },
   "require-dev": {
     "phpunit/phpunit": "12.5.14"
