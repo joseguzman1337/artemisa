@@ -41,7 +41,7 @@ jobs:
 
     - name: Sysdig Secure Inline Scan
       id: scan
-      uses: sysdiglabs/scan-action@554e4d525f3825afec7f880e70941adf85606422
+      uses: sysdiglabs/scan-action@601520256777eb8e8da34719446ceef2870a795f
       with:
         # Tag of the image to analyse. 
         # Change ${{ github.repository }} variable by another image name if you want but don't forget changing also image-tag above
