@@ -41,7 +41,7 @@ jobs:
     - name: Set up Ruby
       uses: ruby/setup-ruby@675dd7ba1b06c8786a1480d89c384f5620a42647
       with:
-        ruby-version: 4.0.0
+        ruby-version: 4.0.2
 
     # This step is not necessary if you add the gem to your Gemfile
     - name: Install Code Scanning integration
