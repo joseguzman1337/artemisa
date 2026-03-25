@@ -29,7 +29,7 @@
     "ext-mbstring": "*",
     "ext-xml": "*",
     "ext-xmlwriter": "*",
-    "php": "8.5.1"
+    "php": "8.5.4"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "4.0.1"

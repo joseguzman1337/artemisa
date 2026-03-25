@@ -4,7 +4,7 @@
   "license": "MIT",
   "name": "codeigniter/framework",
   "require": {
-    "php": "8.5.1"
+    "php": "8.5.4"
   },
   "require-dev": {
     "mikey179/vfsStream": "1.6.10*"
