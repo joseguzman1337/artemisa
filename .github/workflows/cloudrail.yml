@@ -58,7 +58,7 @@ jobs:
           cloud-account-id: # Leave this empty for Static Analaysis, or provide an account ID for Dynamic Analysis, see instructions in Cloudrail SaaS
 
       - name: Upload SARIF file
-        uses: github/codeql-action/upload-sarif@38697555549f1db7851b81482ff19f1fa5c4fedc # v4.34.1
+        uses: github/codeql-action/upload-sarif@c10b8064de6f491fea524254123dbe5e09572f13 # v4.35.1
         # Remember that if issues are found, Cloudrail return non-zero exit code, so the if: always()
         # is needed to ensure the SARIF file is uploaded
         if: always() 
