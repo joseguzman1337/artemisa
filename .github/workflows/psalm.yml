@@ -1,5 +1,5 @@
 name: Psalm – Security Scanner for PHP
-uses: psalm/psalm-github-security-scan@1.2.1
+uses: psalm/psalm-github-security-scan@f3e6fd9432bc...  # v1.2.1
 
 
 on: [push, pull_request]

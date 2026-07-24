@@ -17,6 +17,9 @@ on:
   schedule:
     - cron: '44 13 * * 0'
 
+permissions:
+  contents: read
+
 jobs:
   SCS:
     runs-on: windows-latest
@@ -33,7 +36,7 @@ jobs:
       - name: Set up projects for analysis
         uses: security-code-scan/security-code-scan-add-action@2439fb4aaeda4ad590a7c8bde327d159d03875fd
         
-      - name: Restore dependencies	
+      - name: Restore dependencies  
         run: dotnet restore
 
       - name: Build

@@ -1,31 +1,22 @@
 name: Auto Update and Merge
+# This workflow was disabled because it used the dangerous pattern of:
+#   - pull_request_target trigger
+#   - actions/checkout of ${{ github.event.pull_request.head.ref }}
+#   - git merge of attacker-controlled branch
+#   - direct push to master
+# This is a known RCE vector (see CWE-829 / Security Lab "pwn requests").
+# Replaced with workflow_dispatch only — re-enable only after redesigning with
+# `pull_request` trigger and ref: master (NEVER head.ref).
+on: workflow_dispatch
 
-on:
-  schedule:
-    - cron: '*/15 * * * *' # Run every 15 minutes
-  pull_request_target:
-    types: [assigned, unassigned, labeled, unlabeled, opened, edited, reopened, synchronize, ready_for_review, locked, unlocked, review_requested, review_request_removed, auto_merge_enabled, auto_merge_disabled]
-    branches:
-      - master  # Replace 'target-branch' with your actual branch name      
-
+permissions:
+  contents: read
 
 jobs:
-  auto-merge:
+  noop:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v5.0.1
-        with:
-          fetch-depth: 0  # Fetch all history for merging
-          ref: ${{ github.event.pull_request.head.ref }} # Checkout the PR's branch
-
-      - name: Merge PR into master
+      - name: Disabled - this workflow was auto-merge, removed for security
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git checkout master 
-          git pull origin master  # Ensure master is up-to-date
-          git merge ${{ github.event.pull_request.head.ref }} --no-ff # Merge the PR's branch
-
-      - name: Push changes
-        run: git push origin master
+          echo "This workflow was disabled because the auto-merge pattern was a security risk."
+          echo "Re-enable only after a security review."

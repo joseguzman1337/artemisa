@@ -21,7 +21,7 @@
 # 3. Reference the GitHub secret in the step using the `RIGS-IT/xanitizer-action` GitHub action.
 #    Example:
 #    - name: Xanitizer Security Analysis
-#      uses: RIGS-IT/xanitizer-action@v1
+#      uses: RIGS-IT/xanitizer-action@87d13138fb11...  # v1
 #      with:
 #        license: ${{ secrets.XANITIZER_LICENSE }}
 #

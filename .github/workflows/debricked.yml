@@ -2,6 +2,9 @@ name: Secure Development Workflow
 
 on: [push]
 
+permissions:
+  contents: read
+
 jobs:
   combined:
     runs-on: ubuntu-latest

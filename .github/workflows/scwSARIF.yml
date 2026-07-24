@@ -1,2 +1,2 @@
 - name: Add Secure Code Warrior contextual training to SARIF
-  uses: SecureCodeWarrior/github-action-add-sarif-contextual-training@v1.0.7
+  uses: SecureCodeWarrior/github-action-add-sarif-contextual-training@ba5d772514b1...  # v1.0.7

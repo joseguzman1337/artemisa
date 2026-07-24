@@ -1,4 +1,5 @@
 # artemisa
+[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/<placeholder>/badge)](https://bestpractices.coreinfrastructure.org/projects/<placeholder>)
 
 edu, including room and other systems.
 

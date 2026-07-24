@@ -39,7 +39,7 @@ jobs:
     # GitHub hosted runners already have a compatible version of dotnet installed and this step may be skipped.
     # For self-hosted runners, ensure dotnet version 3.1.201 or later is installed by including this action:
     # - name: Install .NET
-    #   uses: actions/setup-dotnet@v1
+    #   uses: actions/setup-dotnet@d6c1845e8c5bf3fa93e2dc4e64e35f2c5c85ba66  # v4
     #   with:
     #     dotnet-version: '3.1.x'
 

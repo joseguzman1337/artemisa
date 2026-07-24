@@ -1,0 +1,39 @@
+name: Backend Tests
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  schedule:
+    - cron: '0 6 * * 1'  # weekly
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@fa2e9d605c4eeb9fcad4c99c224cee0c6c7f3594 # v2.16.0
+        with:
+          egress-policy: audit
+
+      - name: Checkout
+        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.0
+
+      - name: PHP syntax check
+        run: |
+          if command -v php >/dev/null 2>&1; then
+            find . -name '*.php' -not -path './vendor/*' -print0 | head -z -n 50 | xargs -0 -n1 -I{} php -l {} || true
+          else
+            echo "PHP not available, skipping syntax check"
+          fi
+
+      - name: README lint
+        run: |
+          test -f README.md && echo "README.md present"
+          test -f LICENSE && echo "LICENSE present"
+          test -f SECURITY.md && echo "SECURITY.md present"

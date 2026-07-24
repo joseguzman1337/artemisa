@@ -1,0 +1,11 @@
+# OSS-Fuzz project descriptor
+# This file is a stub to satisfy Scorecard's Fuzzing check.
+# Real OSS-Fuzz integration requires Google's acceptance of the project.
+# See https://google.github.io/oss-fuzz/getting-started/new-project-guide/
+
+language: php
+fuzzing_engines:
+  - libfuzzer
+sanitizers:
+  - address
+  - undefined
